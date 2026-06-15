@@ -7,7 +7,5 @@
     "delChoice": "Elimina una opción de respuesta por posición \nEjemplo: delChoice 2",
     "correct": "Marca una opción según su posición como correcta \nEjemplo: correct 1",
     "false": "Marca una opción según su posición como falsa \nEjemplo: false 1",
-    "image": "Asigna una imagen a la pregunta \nEjemplo: image 'url de la imagen'",
-    "clear": "Limpia la pregunta actual de la memoria",
-    "octave": "Enlista todos los comandos disponibles para Octave"
+    "image": "Asigna una imagen a la pregunta \nEjemplo: image 'url de la imagen'"
 }

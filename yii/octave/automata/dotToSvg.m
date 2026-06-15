@@ -15,7 +15,9 @@ function svgContent = dotToSvg(automata, outputName)
     dotExe = 'dot';
 
     if ispc()
-        winPaths = {'"C:/Program Files/Graphviz/bin/dot.exe"', '"C:/Program Files (x86)/Graphviz/bin/dot.exe"'};
+        winPaths = {
+                fullfile(scriptPath, '..', 'graphviz', 'bin', 'dot.exe')
+                };
 
         for k = 1:numel(winPaths)
             [chkStatus, ~] = system([winPaths{k} ' -V']);
