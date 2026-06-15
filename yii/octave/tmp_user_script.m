@@ -1,1 +1,0 @@
-qtitle "prueba"

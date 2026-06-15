@@ -263,8 +263,6 @@
                 if (subjectEl) {
                     subjectEl.value = (q.subject === null || q.subject === undefined) ? '' : String(q.subject);
                 }
-
-                // Reconstruir choices
                 const choicesContainer = document.getElementById('choices-container');
                 if (choicesContainer) {
                     choicesContainer.innerHTML = '';
@@ -279,12 +277,9 @@
 
                     renumberChoices();
                 }
-
-                // Disparar previsualización
                 if (titleInput) titleInput.dispatchEvent(new Event('input'));
                 if (stemInput) stemInput.dispatchEvent(new Event('input'));
             } catch (e) {
-                // Silencioso: el usuario canceló o archivo inválido
                 console.error(e);
             }
         });

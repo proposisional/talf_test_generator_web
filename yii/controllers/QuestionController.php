@@ -122,10 +122,11 @@ class QuestionController extends Controller
                     break;
             }
 
-            $eval = "addpath(genpath('" . OCTAVE_SCRIPTS_PATH . "')); 
-            cd('" . OCTAVE_SCRIPTS_PATH . "/generators'); 
-            jsonQ = " . $func . "();";
-            $cmd = OCTAVE_BIN . ' --quiet --no-gui --eval ' . escapeshellarg($eval);
+            $octaveBin = OCTAVE_BIN;
+            $octaveRoot = str_replace('\\', '/', OCTAVE_SCRIPTS_PATH);
+            $generatorsPath = $octaveRoot . '/generators';
+            $eval = "addpath(genpath('{$octaveRoot}')); cd('{$generatorsPath}'); jsonQ = {$func}();";
+            $cmd = "\"$octaveBin\" --no-gui --quiet --eval " . escapeshellarg($eval);
             exec($cmd, $output, $status);
 
             $outputStr = implode("\n", $output);

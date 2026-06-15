@@ -6,14 +6,11 @@ class m260124_000001_init_schema extends Migration
 {
     public function safeUp()
     {
-        // Tabla question
         $this->createTable('{{%question}}', [
             'id' => $this->primaryKey(),
             'question_form' => $this->text()->notNull(),
             'created_at' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
         ]);
-
-        // Tabla test
         $this->createTable('{{%test}}', [
             'id' => $this->primaryKey(),
             'date_created' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
@@ -21,7 +18,6 @@ class m260124_000001_init_schema extends Migration
             'evaluation' => $this->string(64),
         ]);
 
-        // Tabla user (en PostgreSQL "user" es keyword; Yii lo citará correctamente)
         $this->createTable('{{%user}}', [
             'id' => $this->primaryKey(),
             'username' => $this->string(64)->notNull(),
@@ -33,7 +29,6 @@ class m260124_000001_init_schema extends Migration
         ]);
         $this->createIndex('idx_user_username_unique', '{{%user}}', 'username', true);
 
-        // Tabla answer
         $this->createTable('{{%answer}}', [
             'id' => $this->primaryKey(),
             'test_id' => $this->integer()->notNull(),

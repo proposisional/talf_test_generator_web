@@ -23,7 +23,6 @@
             subject = Number(q.subject);
         }
 
-        // Filtrar correct_choices fuera de rango
         const boundedCorrect = correct_choices.filter(n => n < choices.length);
 
         return {
@@ -49,7 +48,6 @@
             throw new Error('el archivo no contiene JSON válido');
         }
 
-        // Aceptar tanto { ... } como { Question: { ... } }
         const rawQuestion = (parsed && typeof parsed === 'object' && parsed.Question && typeof parsed.Question === 'object')
             ? parsed.Question
             : parsed;

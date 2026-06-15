@@ -7,7 +7,6 @@ class m260124_000003_ensure_question_subject_and_admin extends Migration
 {
     public function safeUp()
     {
-        // 1) Asegurar tabla question + columna subject
         $table = $this->db->schema->getTableSchema('{{%question}}', true);
         if ($table === null) {
             $this->createTable('{{%question}}', [
@@ -24,7 +23,6 @@ class m260124_000003_ensure_question_subject_and_admin extends Migration
             }
         }
 
-        // 2) Crear usuario admin/admin si no existe
         $userTable = $this->db->schema->getTableSchema('{{%user}}', true);
         if ($userTable !== null) {
             $exists = (new \yii\db\Query())
@@ -50,8 +48,6 @@ class m260124_000003_ensure_question_subject_and_admin extends Migration
 
     public function safeDown()
     {
-        // No eliminamos columnas/tablas (sería destructivo).
-        // Solo eliminamos el usuario admin si existe.
         $userTable = $this->db->schema->getTableSchema('{{%user}}', true);
         if ($userTable !== null) {
             $this->delete('{{%user}}', ['username' => 'admin']);
