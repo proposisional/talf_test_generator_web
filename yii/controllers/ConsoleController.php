@@ -66,7 +66,7 @@ class ConsoleController extends Controller
         $_SESSION['question'] ??= $this->createEmptyQuestion();
 
         // -------------------- PHP COMMANDS --------------------
-        $phpCommands = ['help', 'new', 'title', 'stem', 'image', 'addChoice', 'delChoice', 'correct', 'false', 'subject'];
+        $phpCommands = ['help', 'new', 'title', 'stem', 'image', 'addChoice', 'delChoice', 'correct', 'true', 'false', 'subject'];
 
         if (in_array($cmdName, $phpCommands)) {
             $response = $this->processCommand($cmdName, $cmdArg);
@@ -292,6 +292,7 @@ class ConsoleController extends Controller
                 $response['output'] = $this->cmdDelChoice($cmdArg)['output'];
                 break;
             case 'correct':
+            case 'true':
                 $response['output'] = $this->cmdCorrect($cmdArg)['output'];
                 break;
             case 'false':
@@ -383,9 +384,8 @@ class ConsoleController extends Controller
         $question = $_SESSION['question'];
         $index = (int) $arg;
 
-        // Verifica que la opción exista
-        if ($index < 1 || $index > count($question['choices'])) {
-            return ['output' => "Error: la opción $index no existe. Solo hay " . count($question['choices']) . " opciones."];
+        if ($index < 0 || $index >= count($question['choices'])) {
+            return ['output' => "Error: la opción $index no existe. Solo hay " . count($question['choices']) . " opciones (0–" . (count($question['choices']) - 1) . ")."];
         }
 
         // Evita duplicados
