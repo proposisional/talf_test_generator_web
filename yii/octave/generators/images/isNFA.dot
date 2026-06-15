@@ -1,0 +1,26 @@
+digraph finite_state_machine {
+  rankdir=LR;
+  size="5"
+  node [fontname="times-italic"];
+  edge [fontname="times-italic"];
+  node [shape = point]; qi
+  node [shape = doublecircle]; q3,q4;
+  node [shape = circle];
+  qi -> q0;
+  q1 -> q2 [ label = "caa" ];
+  q2 -> q2 [ label = "aba" ];
+  q3 -> q0 [ label = "ab" ];
+  q3 -> q2 [ label = "bb" ];
+  q3 -> q2 [ label = "bacaacb" ];
+  q1 -> q4 [ label = "ca" ];
+  q4 -> q0 [ label = "c" ];
+  q2 -> q1 [ label = "*" ];
+  q2 -> q1 [ label = "*" ];
+  q3 -> q2 [ label = "ccc" ];
+  q2 -> q1 [ label = "ccbc" ];
+  q1 -> q0 [ label = "a" ];
+  q1 -> q1 [ label = "*" ];
+  q2 -> q3 [ label = "ccb" ];
+  q4 -> q4 [ label = "bbb" ];
+  q3 -> q3 [ label = "bab" ];
+}

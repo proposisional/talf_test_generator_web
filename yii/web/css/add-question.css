@@ -1,0 +1,70 @@
+.choice-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.choice-item input[type="text"] {
+    flex: 1;
+}
+
+.correct-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.remove-choice {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    line-height: 1;
+    color: #c0392b;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.remove-choice:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+.image-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-inputs input[type="file"] {
+    flex: 1;
+}
+
+.image-inputs input[type="text"] {
+    flex: 2;
+}
+
+
+#preview-content {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* nunca horizontal */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    word-break: break-word;
+}
+
+#preview-content ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#preview-content li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

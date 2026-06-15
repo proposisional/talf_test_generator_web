@@ -1,0 +1,47 @@
+.result-container {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.result-container h2 {
+    margin-top: 0;
+}
+
+.result-metrics {
+    margin: 10px 0 20px;
+}
+
+.result-metrics span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.result-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.result-actions a,
+.result-actions button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #1976d2;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #e0e0e0;
+    color: #f6a03d;
+}

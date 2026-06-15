@@ -1,0 +1,254 @@
+[
+  {
+    "name" : "g1",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["A", "B"],
+      "T" : ["a", "b"],
+      "P" : [["A",  "baaBB"],
+             ["BA", "ccaabB"],
+             ["B",  "ε"],
+             ["B",  "aa"],
+             ["B",  "A"]],
+      "S" : "A"
+    }
+  },
+  {
+    "name" : "g2",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["A", "B"],
+      "T" : ["0", "1"],
+      "P" : [["A",  "0A"],
+             ["A", "1B"],
+             ["A",  "0"],
+             ["B",  "1"],
+             ["B",  "A1"]],
+      "S" : "A"
+    }
+  },
+  {
+    "name" : "N",
+    "hint" : "P - positive integer; F - first digit ∈ {1..9}; D - decimal digit ∈ {0..9}; R - rest of the number",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["P", "F", "D", "R"],
+      "T" : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      "P" : [["F", "1"],
+             ["F", "2"],
+             ["F", "3"],
+             ["F", "4"],
+             ["F", "5"],
+             ["F", "6"],
+             ["F", "7"],
+             ["F", "8"],
+             ["F", "9"],
+             ["D", "0"],
+             ["D", "F"],
+             ["R", "D"],
+             ["R", "DR"],
+             ["P", "F"],
+             ["P", "FR"]],
+      "S" : "P"
+    }
+  },
+  {
+    "name" : "N_0",
+    "hint" : "N - natural number; F - first digit ∈ {1..9}; D - decimal digit ∈ {0..9}; R - rest of the number",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["N", "F", "D", "R"],
+      "T" : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      "P" : [["F", "1"],
+             ["F", "2"],
+             ["F", "3"],
+             ["F", "4"],
+             ["F", "5"],
+             ["F", "6"],
+             ["F", "7"],
+             ["F", "8"],
+             ["F", "9"],
+             ["D", "0"],
+             ["D", "F"],
+             ["R", "D"],
+             ["R", "DR"],
+             ["N", "D"],
+             ["N", "FR"]],
+      "S" : "N"
+    }
+  },
+  {
+    "name" : "R01",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["E"],
+      "T" : ["0", "1", "∅", ")", "(", "4", "+", "*"],
+      "P" : [["E", "∅"],
+             ["E", "0"],
+             ["E", "1"],
+             ["E", "(EE)"],
+             ["E", "(E+E)"],
+             ["E", "E*"]],
+      "S" : "E"
+    }
+  },
+  {
+    "name" : "oddlength",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["A", "B"],
+      "T" : ["@"],
+      "P" : [["A", "@"],
+             ["A", "@B"],
+             ["B", "@A"]],
+      "S" : "A"
+    }
+  },
+  {
+    "name" : "evenlength",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["A", "B"],
+      "T" : ["@"],
+      "P" : [["B", "@"],
+             ["A", "@B"],
+             ["B", "@A"]],
+      "S" : "A"
+    }
+  },
+  {
+    "name" : "CNF",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["S", "A", "B", "C", "D"],
+      "T" : ["0", "1"],
+      "P" : [["S", "AB"],
+             ["A", "CD"],
+             ["A", "CB"],
+             ["B", "DC"],
+             ["B", "AD"],
+             ["C", "0"],
+             ["D", "1"]],
+      "S" : "S"
+    }
+  },
+  {
+    "name" : "GNF",
+    "hint" : "",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["S", "A", "B"],
+      "T" : ["0", "1"],
+      "P" : [["S", "0ABS"],
+             ["S", "1AB"],
+             ["A", "1B"],
+             ["B", "0"]
+            ],
+      "S" : "S"
+    }
+  },
+  {
+    "name" : "WHILE",
+    "hint" : "N - natural number; F - first digit ∈ {1..9}; D - decimal digit ∈ {0..9}; R - rest of the number; W - While program",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["W", "N", "F", "R", "D", "C", "S", "A", "L", "I", "P"],
+      "T" : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "X", "≔", "≠", "+", "-", "w", "h", "i", "l", "e", "d", "o", ";", ")", "(", ","],
+      "P" : [["F", "1"],
+             ["F", "2"],
+             ["F", "3"],
+             ["F", "4"],
+             ["F", "5"],
+             ["F", "6"],
+             ["F", "7"],
+             ["F", "8"],
+             ["F", "9"],
+             ["D", "0"],
+             ["D", "F"],
+             ["R", "D"],
+             ["R", "DR"],
+             ["N", "D"],
+             ["N", "FR"],
+             ["P", "F"],
+             ["P", "FR"],
+             ["C", "S"],
+             ["C", "C;S"],
+             ["S", "A"],
+             ["S", "L"],
+             ["I", "XP"],
+             ["L", "whileI≠0doCod"],
+             ["A", "I≔0"],
+             ["A", "I≔I"],
+             ["A", "I≔I+1"],
+             ["A", "I≔I-1"],
+             ["W", "(N,C)"]],
+      "S" : "W"
+    }
+  },
+  {
+    "name" : "WHILE_ASCII",
+    "hint" : "N - natural number; F - first digit ∈ {1..9}; D - decimal digit ∈ {0..9}; R - rest of the number; W - While program",
+    "e.g." : [],
+    "representation" : {
+      "N" : ["W", "N", "F", "R", "D", "C", "S", "A", "L", "I", "P"],
+      "T" : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "X", "≔", "≠", "+", "-", "w", "h", "i", "l", "e", "d", "o", ";", ")", "(", ","],
+      "P" : [["F", "1"],
+             ["F", "2"],
+             ["F", "3"],
+             ["F", "4"],
+             ["F", "5"],
+             ["F", "6"],
+             ["F", "7"],
+             ["F", "8"],
+             ["F", "9"],
+             ["D", "0"],
+             ["D", "F"],
+             ["R", "D"],
+             ["R", "DR"],
+             ["N", "D"],
+             ["N", "FR"],
+             ["P", "F"],
+             ["P", "FR"],
+             ["C", "S"],
+             ["C", "C;S"],
+             ["S", "A"],
+             ["S", "L"],
+             ["I", "XP"],
+             ["L", "whileI!=0doCod"],
+             ["A", "I:=0"],
+             ["A", "I:=I"],
+             ["A", "I:=I+1"],
+             ["A", "I:=I-1"],
+             ["W", "(N,C)"]],
+      "S" : "W"
+    }
+  },
+  {
+    "name" : "creeping_plant",
+    "hint" : "L-system for a creeping type of plant, developing to the right.",
+    "e.g." : ["software/grammar/lsystem/developlsystem('creeping_plant',3)"],
+    "representation" : {
+      "N" : ["G"],
+      "T" : ["[", "]", "+", "-"],
+      "P" : [["G", "G+G-GG[[+G-]+G-G[-+G-GG[+G-G+G]]]G[-]"]],
+      "S" : "G"
+    }
+  },
+  {
+    "name" : "climbing_plant",
+    "hint" : "L-system for a climbing type of plant, developing upward.",
+    "e.g." : ["software/grammar/lsystem/developlsystem('climbing_plant',3)"],
+    "representation" : {
+      "N" : ["G"],
+      "T" : ["[", "]", "+", "-"],
+      "P" : [["G", "G+[GG]G-[+[G][][G][+G[-G+][G+]G[-G+]]G]"]],
+      "S" : "G"
+    }
+  }  
+]

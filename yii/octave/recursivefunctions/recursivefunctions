@@ -1,0 +1,11 @@
+constant^1_0      <θ|π^2_2>
+constant^1_1      σ(<θ|π^2_2>)
+constant^2_3      <<σ(σ(σ(θ)))|π^2_2>|π^3_3>
+addition          <π^1_1|σ(π^3_3)>
+predecessor       <θ|π^2_1>
+subtraction       <π^1_1|predecessor(π^3_3)>
+product           <constant^1_0|<π^1_1|σ(π^3_3)>(π^3_1,π^3_3)>
+division          μ[subtraction(π^3_1,product(π^3_2,π^3_3))]
+power             <constant^1_1|product(π^3_1,π^3_3)>
+squareroot        μ[subtraction(π^2_1,product(π^2_2,π^2_2))]
+cuberoot          μ[subtraction(π^2_1,power(π^2_2,constant^2_3))]

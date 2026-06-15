@@ -1,0 +1,44 @@
+[
+  {
+    "title": "",
+    "stem": "Si \\( \\alpha \\) es una expresión regular, entonces:",
+    "image": "",
+    "choices": [
+      "\\( \\alpha\\alpha^* - \\alpha^* = \\emptyset \\)",
+      "\\( \\alpha\\alpha^* - \\alpha^* = \\{\\varepsilon\\} \\)",
+      "\\( \\alpha\\alpha^* - \\alpha^* = \\alpha \\)"
+    ],
+    "correct_choices": [
+      0
+    ],
+    "is_multiple": false
+  },
+  {
+    "title": "Selecciona las igualdades correctas",
+    "stem": "Puedes seleccionar más de una.",
+    "image": "",
+    "choices": [
+      "\\( a^2 + b^2 = c^2 \\)",
+      "\\( x + y = xy \\)",
+      "\\( \\frac{1}{2} + \\frac{1}{2} = 1 \\)"
+    ],
+    "correct_choices": [
+      1,
+      2
+    ],
+    "is_multiple": true
+  },
+  {
+    "title": "",
+    "stem": "\\( \\Sigma^+ = \\Sigma^* \\)",
+    "image": "",
+    "choices": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_choices": [
+      1
+    ],
+    "is_multiple": false
+  }
+]

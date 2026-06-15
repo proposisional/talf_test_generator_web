@@ -1,0 +1,39 @@
+.history-container {
+    padding: 20px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    display: block;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #222;
+    background: #fafafa;
+}
+
+.history-item:hover {
+    background: #f0f0f0;
+}
+
+.item-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.item-meta {
+    display: flex;
+    gap: 14px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.item-meta .score {
+    font-weight: 600;
+}

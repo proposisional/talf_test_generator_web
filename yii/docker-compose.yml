@@ -1,0 +1,42 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - "${APP_PORT:-8080}:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    environment:
+      OCTAVE_BIN: ${OCTAVE_BIN:-/usr/bin/octave}
+    entrypoint: /docker-entrypoint.sh
+
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS:-root}
+      MYSQL_DATABASE: ${DB_NAME:-tfg_talf}
+      MYSQL_USER: ${DB_USER:-yii}
+      MYSQL_PASSWORD: ${DB_PASS:-yii}
+    ports:
+      - "${DB_EXPOSE_PORT:-3306}:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./tfg_talf.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USER:-yii}
+      PMA_PASSWORD: ${DB_PASS:-yii}
+    ports:
+      - "${PMA_PORT:-8081}:80"
+    depends_on:
+      - db
+
+volumes:
+  dbdata:

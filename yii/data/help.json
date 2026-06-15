@@ -1,0 +1,13 @@
+{
+    "help": "Muestra la lista de comandos disponibles y su descripción",
+    "new": "Crea una nueva pregunta vacía",
+    "title": "Establece el título de la pregunta \nEjemplo: title '¿Qué es un autómata?'",
+    "stem": "Define el enunciado o cuerpo de la pregunta \nEjemplo: stem 'Selecciona el autómata correcto'",
+    "addChoice": "Agrega una opción de respuesta. Si no existe \nEjemplo: choice 'Madrid' 1 (posición opcional)",
+    "delChoice": "Elimina una opción de respuesta por posición \nEjemplo: delChoice 2",
+    "correct": "Marca una opción según su posición como correcta \nEjemplo: correct 1",
+    "false": "Marca una opción según su posición como falsa \nEjemplo: false 1",
+    "image": "Asigna una imagen a la pregunta \nEjemplo: image 'url de la imagen'",
+    "clear": "Limpia la pregunta actual de la memoria",
+    "octave": "Enlista todos los comandos disponibles para Octave"
+}

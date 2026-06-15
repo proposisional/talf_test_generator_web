@@ -1,0 +1,62 @@
+body {
+    font-family: 'Computer Modern Serif', serif;
+    margin: 20px !important;
+}
+
+.question-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.question-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.question-column.preview {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+    overflow: hidden;
+    /* contener el contenido */
+}
+
+#preview-content {
+    word-wrap: break-word;
+    /* IE legacy */
+    overflow-wrap: anywhere;
+    /* cortar palabras largas si es necesario */
+    white-space: normal;
+    /* permitir saltos de línea automáticos */
+}
+
+#question-form .form-group {
+    margin-left: 12px;
+}
+
+#question-form input.form-control,
+#question-form textarea.form-control {
+    padding-left: 14px;
+}
+
+#choices-container .choice-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+}
+
+#choices-container .choice-item input.form-control {
+    flex: 1 1 auto;
+}
+
+#choices-container .choice-item .correct-checkbox {
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+#choices-container .choice-item .remove-choice {
+    margin-left: auto;
+}

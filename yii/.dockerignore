@@ -1,0 +1,26 @@
+.git
+.gitignore
+.idea
+.vscode
+
+# Dependencias y artefactos locales
+vendor
+node_modules
+
+# Runtime/cache generado por Yii
+runtime
+web/assets
+
+# Tests (no necesarios en prod)
+tests
+
+# Vagrant/compose local
+vagrant
+Vagrantfile
+docker-compose.yml
+
+# Archivos locales
+.env
+
+# Logs
+*.log

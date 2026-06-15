@@ -1,0 +1,30 @@
+databases:
+  - name: db
+    databaseName: tfg_talf
+    user: yii
+    plan: free
+
+projects:
+  - name: talf
+    environments:
+      - name: prod
+        services:
+          - type: web
+            name: app
+            runtime: docker
+            dockerfilePath: ./Dockerfile
+            autoDeploy: true
+            healthCheckPath: /
+            envVars:
+              - key: APP_ENV
+                value: prod
+              - key: DEBUG_STARTUP
+                value: "1"
+              - key: DATABASE_URL
+                fromDatabase:
+                  name: db
+                  property: connectionString
+              - key: RUN_MIGRATIONS
+                value: "0"
+              - key: COOKIE_VALIDATION_KEY
+                sync: false

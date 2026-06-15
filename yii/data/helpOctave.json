@@ -1,0 +1,12 @@
+{
+    "dfa": "Genera una imagen de un autómata finito determinista (DFA)",
+    "nfa": "Genera una imagen de un autómata finito no determinista (NFA)",
+    "grammar": "Genera una gramática del tipo indicado (0, 1, 2 o 3)",
+    "turingMachine": "Genera la representación matricial de una máquina de Turing.\n Puede indicarse el numero de estados y alfabeto, ejemplo: <turingMachine 3 'abc'>",
+    "isNFA": "Pregunta sobre si un autómata es no determinista. Puedes indicar ",
+    "unionSets": "Pregunta sobre la unión de dos conjuntos aleatorios.",
+    "diffSets": "Pregunta sobre la diferencia de dos conjuntos aleatorios.",
+    "intersectSets": "Pregunta sobre la intersección de dos conjuntos aleatorios.",
+    "automataString": "Dado un automata, que cadena puede ser procesada por este.",
+    "algoritmia": "Preguntas sobre P y NP"
+}
